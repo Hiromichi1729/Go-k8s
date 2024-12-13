@@ -1,0 +1,19 @@
+# .air.toml
+
+# ワッチ対象のディレクトリを指定
+root = "."
+tmp_dir = "tmp"
+
+# 監視対象のファイル拡張子を指定（Go ファイル）
+watch = ["*.go"]
+
+# Air の動作設定
+[build]
+  cmd = "go run main.go"
+  bin = "main"
+  log = "air.log"
+
+# ホットリロードを有効にする
+[air]
+  delay = 2000  # 2秒の遅延
+  full_reload = false

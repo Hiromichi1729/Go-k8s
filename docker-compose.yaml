@@ -1,0 +1,16 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfiles/app/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./app:/app
+  web:
+    build: ./Dockerfiles/web
+    ports:
+      - "80:80"
+    volumes:
+      - ./Dockerfiles/web/nginx.conf:/etc/web/nginx.conf
