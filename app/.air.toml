@@ -9,7 +9,7 @@ watch = ["*.go"]
 
 # Air の動作設定
 [build]
-  cmd = "go run main.go"
+  cmd = "go run cmd/main.go"
   bin = "main"
   log = "air.log"
 
